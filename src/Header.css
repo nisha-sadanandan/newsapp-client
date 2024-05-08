@@ -1,0 +1,94 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root{
+    --Dark-grayish-blue: hsl(236, 13%, 42%);
+    --Soft-red: hsl(5, 85%, 63%);
+    --Soft-orange: hsl(35, 77%, 62%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+body{
+    font-family: "Inter";
+}
+
+img{
+
+    max-width: 100%;
+}
+
+.container{
+    margin: 0 auto;
+    max-width:1240px;
+    padding: 0 30px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:40px 0;
+}
+
+.links ul{
+    display: flex;
+    gap: 1rem;
+    
+}
+
+.links ul li{
+    list-style-type: none;
+}
+
+.links ul li a{
+    text-decoration: none;
+    color:var(--Dark-grayish-blue);
+    transition: 0.5 color ease ;
+}
+
+.links ul li a:hover{
+   color:var(--Soft-red);
+}
+
+
+
+  @media screen and (max-width:800px){
+      
+    .hero{
+        grid-template-columns: 1fr;
+    }
+    
+    .articles{
+
+        flex-direction: column;
+    }
+
+  }
+
+
+  @keyframes slide {
+    0%{
+        transform: translateY(-10vh);
+        opacity: 0;
+    }
+
+    100%{
+
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.navbar{animation:1s ease-in .5s slide;}
+
+
+
+
+
+   
